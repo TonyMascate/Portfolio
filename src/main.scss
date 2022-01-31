@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap");
+
+// VARIABLES
+$primary: #f16262;
+$secondary: #ed8080;
+$darkgrey: #3c3c3c;
+$darkgrey-1: #404040;
+$lightgrey: #cdcdcd;
+$white: #fff;
+
+// GENERAL
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    font-family: "Montserrat", serif;
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 3rem;
+}
+h2 {
+    font-size: 2.25rem;
+}
+h3 {
+    font-size: 1.5rem;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 500;
+}
+.container {
+    padding: 20px 10px;
+    width: 100%;
+    max-width: 1440px;
+}
+.btn-primary {
+    padding: 12px 24px;
+    border-radius: 100px;
+    background-color: $primary;
+    color: white;
+    font-weight: 800;
+    font-size: 1.5rem;
+    border: none;
+}
+.btn-secondary {
+    padding: 12px 24px;
+    border-radius: 100px;
+    color: $primary;
+    border: 1px solid $primary;
+    font-weight: 800;
+    background-color: white;
+    font-size: 1.5rem;
+}
+
+// HERO
+
+#hero {
+    min-height: 100vh;
+    background-color: #3c3c3c;
+    z-index: -2;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    video {
+        object-fit: cover;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+    .hero {
+        display: flex;
+        min-height: 100vh;
+        .text {
+            min-height: 100%;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .content {
+                background-color: white;
+                padding: 50px 10px;
+                max-width: 800px;
+                width: 100%;
+                min-height: 350px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-direction: column;
+                border-radius: 500px;
+                h1 {
+                    color: $primary;
+                    font-weight: 900;
+                    letter-spacing: 5px;
+                }
+                h2 {
+                    color: $darkgrey-1;
+                    letter-spacing: 3px;
+                    font-weight: 700;
+                }
+                h3 {
+                    color: $darkgrey-1;
+                    font-weight: 600;
+                }
+                .buttons {
+                    margin-top: 20px;
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    column-gap: 40px;
+                }
+            }
+        }
+        .photo {
+            padding: 0 50px;
+            display: flex;
+            align-items: flex-end;
+        }
+    }
+    .custom-shape-divider-bottom-1643638019 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+    }
+    .custom-shape-divider-bottom-1643638019 svg {
+        position: relative;
+        display: block;
+        width: calc(135% + 1.3px);
+        height: 136px;
+    }
+    .custom-shape-divider-bottom-1643638019 .shape-fill {
+        fill: #f16262;
+    }
+}
+@media screen and (max-width: 1300px) {
+    #hero {
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            .photo {
+                margin-bottom: -250px;
+            }
+            .text {
+                width: 100%;
+                align-items: flex-end;
+                padding-bottom: 40px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 700px) {
+    #hero {
+        .wave {
+            path {
+                height: 90px;
+            }
+        }
+        .hero {
+            .photo {
+                display: none;
+            }
+            .text {
+                align-items: center;
+                .content {
+                    padding: 120px 10px;
+                    text-align: center;
+                    h1 {
+                        font-size: 2.1rem;
+                    }
+                    h2 {
+                        font-size: 1.5rem;
+                        padding: 10px 0;
+                    }
+                    h3 {
+                        font-size: 1.1rem;
+                    }
+                    .buttons {
+                        grid-template-rows: repeat(2, 1fr);
+                        grid-template-columns: 1fr;
+                        row-gap: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
