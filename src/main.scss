@@ -216,17 +216,15 @@ section {
         padding: 50px 20px 150px 20px;
         .cover {
             z-index: 0;
+            aspect-ratio: 3/4;
             .portrait {
-                aspect-ratio: 3/4;
-                max-width: 330px;
-                min-width: 280px;
-                width: 100%;
                 border: 14px solid white;
                 position: relative;
                 background-color: $primary;
                 margin: 36px;
                 display: flex;
                 align-items: flex-end;
+                width: 330px;
                 &::before {
                     content: "";
                     position: absolute;
@@ -264,6 +262,7 @@ section {
             flex-direction: column;
             padding: 150px 20px 250px 20px;
             .cover {
+                min-width: 240px;
                 .portrait {
                     margin-right: 0px;
                 }
@@ -278,12 +277,17 @@ section {
 @media screen and (max-width: 400px) {
     #moi {
         .moi {
-            .cover {
-                .portrait {
-                    margin: 0;
-                    &::before {
-                        display: none;
-                    }
+            .cover{
+                .portrait{
+                    width: auto;
+                }
+            }
+            .text{
+                h2{
+                    font-size: 1.5rem;
+                }
+                p{
+                    font-size: 1rem;
                 }
             }
         }
