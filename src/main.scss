@@ -37,6 +37,11 @@ a {
     color: inherit;
     font-weight: 500;
 }
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .container {
     padding: 20px 10px;
     width: 100%;
@@ -69,14 +74,11 @@ a {
     z-index: -2;
     position: relative;
     overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     video {
         object-fit: cover;
         width: 100vw;
         height: 100vh;
-        position: fixed;
+        position: absolute;
         top: 0;
         left: 0;
         z-index: -1;
@@ -195,6 +197,92 @@ a {
                         grid-template-rows: repeat(2, 1fr);
                         grid-template-columns: 1fr;
                         row-gap: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// MOI
+
+#moi {
+    background-color: $primary;
+    .moi {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        padding: 50px 20px 150px 20px;
+        .cover {
+            z-index: 0;
+            .portrait {
+                aspect-ratio: 3/4;
+                max-width: 330px;
+                min-width: 280px;
+                width: 100%;
+                border: 14px solid white;
+                position: relative;
+                background-color: $primary;
+                margin: 36px;
+                display: flex;
+                align-items: flex-end;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: -50px;
+                    left: -50px;
+                    width: calc(100% + 28px);
+                    height: calc(100% + 28px);
+                    border: 14px solid #ffb1b1;
+                    z-index: -1;
+                }
+                img {
+                    width: 100%;
+                }
+            }
+        }
+        .text {
+            flex-grow: 1;
+            max-width: 800px;
+            margin-left: 50px;
+            h2 {
+                letter-spacing: 3px;
+            }
+            p {
+                font-size: 1.5rem;
+                text-align: justify;
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    #moi {
+        .moi {
+            flex-direction: column;
+            padding: 150px 20px 250px 20px;
+            .cover {
+                .portrait {
+                    margin-right: 0px;
+                }
+            }
+            .text {
+                margin: 0;
+                margin-top: 40px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 400px) {
+    #moi {
+        .moi {
+            .cover {
+                .portrait {
+                    margin: 0;
+                    &::before {
+                        display: none;
                     }
                 }
             }
