@@ -1,5 +1,6 @@
 import React from 'react';
 import { skillslist } from '../datas/skillslist';
+import {GoVerified} from 'react-icons/go'
 
 function Skills() {
   return (
@@ -14,9 +15,17 @@ function Skills() {
             {skillslist.map((item, index) => {
                 const {domain, outils, skills} = item
                 return(
-                    <div className="item">
+                    <div className="item" key={index}>
                         <h2>{domain}</h2>
                         <div className="underline"></div>
+                        <div className="list">
+                            {skills.map((skill, index) => {
+                                <div className="list--item" key={index}>
+                                    <GoVerified />
+                                    {skill}
+                                </div>
+                            })}
+                        </div>
                     </div>
                 )
             })}
