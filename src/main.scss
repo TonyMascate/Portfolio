@@ -6,6 +6,7 @@ $secondary: #ed8080;
 $darkgrey: #3c3c3c;
 $darkgrey-1: #404040;
 $lightgrey: #cdcdcd;
+$subtitle: #7b7b7b;
 $white: #fff;
 
 // GENERAL
@@ -64,6 +65,49 @@ section {
     font-weight: 800;
     background-color: white;
     font-size: 1.5rem;
+}
+
+// TITLE DES PARTIES
+.title {
+    padding: 20px 50px;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: fit-content;
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    text-align: center;
+    h2 {
+        color: $primary;
+        font-size: 3rem;
+        font-weight: 900;
+    }
+    h3 {
+        font-size: 2.1rem;
+        color: $subtitle;
+    }
+    .underline {
+        width: 50%;
+        height: 4px;
+        background-color: $secondary;
+        margin-top: 30px;
+    }
+}
+@media screen and (max-width: 768px){
+    .title{
+        h2{
+            font-size: 1.9rem;
+        }
+        h3{
+            font-size: 1.15rem;
+        }
+        .underline{
+            margin-top: 10px;
+        }
+    }
 }
 
 // HERO
@@ -255,7 +299,6 @@ section {
         }
     }
 }
-
 @media screen and (max-width: 991px) {
     #moi {
         .moi {
@@ -277,17 +320,132 @@ section {
 @media screen and (max-width: 400px) {
     #moi {
         .moi {
-            .cover{
-                .portrait{
+            .cover {
+                .portrait {
                     width: auto;
                 }
             }
-            .text{
-                h2{
+            .text {
+                h2 {
                     font-size: 1.5rem;
                 }
-                p{
+                p {
                     font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
+// SERVICES
+
+#services {
+    min-height: 100vh;
+    align-items: flex-start;
+    margin-top: -100px;
+    .services {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+        .content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            align-items: center;
+            margin-top: 50px;
+            img {
+                max-width: 300px;
+                margin: 0 30px;
+            }
+            .first,
+            .second {
+                display: grid;
+                grid-auto-rows: minmax(110px, auto);
+                row-gap: 100px;
+                flex: 1;
+            }
+            .item {
+                display: flex;
+                .icon {
+                    min-width: 54px;
+                    height: 54px;
+                    border: 2px solid $secondary;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 100px;
+                    padding: 10px;
+                    margin: 0 10px;
+                    svg {
+                        width: 100%;
+                        height: 100%;
+                        color: $secondary;
+                    }
+                }
+                .text {
+                    h4 {
+                        font-size: 1.5rem;
+                        color: $darkgrey;
+                        margin-bottom: 5px;
+                    }
+                    p {
+                        font-size: 1rem;
+                        color: $subtitle;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #services {
+        .services {
+            .content {
+                grid-template-columns: repeat(2, 1fr);
+                column-gap: 30px;
+                img {
+                    display: none;
+                }
+                .first {
+                    .item {
+                        flex-direction: row-reverse;
+                        .text {
+                            text-align: right;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    #services {
+        .services {
+            .content {
+                grid-template-columns: repeat(1, 1fr);
+                column-gap: 0px;
+                img {
+                    display: none;
+                }
+                .first {
+                    margin-bottom: 20px;
+                    .item {
+                        flex-direction: row;
+                        .text {
+                            text-align: left;
+                        }
+                    }
+                }
+                .first,
+                .second {
+                    row-gap: 20px;
+                    grid-auto-rows: minmax(70px, auto);
+                    .text {
+                        h4 {
+                            font-size: 1.25rem;
+                        }
+                    }
                 }
             }
         }
