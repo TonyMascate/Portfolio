@@ -14,9 +14,9 @@ function services() {
         </div>
         <div className="content">
           <div className="first">
-            {service1.map((item) => {
+            {service1.map((item, index) => {
               return (
-                <div className="item">
+                <div className="item" key={index}>
                   <div className="icon">
                     <FaStickyNote />
                   </div>
@@ -30,9 +30,9 @@ function services() {
           </div>
           <img src={mockup} alt="mockup d'un iphone" />
           <div className="second">
-            {service2.map((item) => {
+            {service2.map((item, index) => {
               return (
-                <div className="item">
+                <div className="item" key={index}>
                   <div className="icon">
                     <FaStickyNote />
                   </div>

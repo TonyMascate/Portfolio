@@ -5,6 +5,7 @@ $primary: #f16262;
 $secondary: #ed8080;
 $darkgrey: #3c3c3c;
 $darkgrey-1: #404040;
+$darkgrey-2: #636363;
 $lightgrey: #cdcdcd;
 $subtitle: #7b7b7b;
 $white: #fff;
@@ -67,6 +68,18 @@ section {
     background-color: white;
     font-size: 1.5rem;
 }
+.btn-outil{
+    padding: 10px 20px;
+    background-color: $secondary;
+    width: fit-content;
+    border-radius: 15px;
+    font-weight: 800;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: white;
+    margin: 5px 10px 10px 0;
+    box-shadow: 0px 4px 4px 0px rgba(#000000, 0.25), 0px 0px 1px 0px rgba(#000000, 0.06);
+}
 
 // TITLE DES PARTIES
 .title {
@@ -83,6 +96,7 @@ section {
     text-align: center;
     h2 {
         color: $primary;
+        letter-spacing: 3px;
         font-size: 3rem;
         font-weight: 900;
     }
@@ -444,6 +458,107 @@ section {
                     .text {
                         h4 {
                             font-size: 1.25rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// SKILLS
+#skills{
+    .skills{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .content{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 50px;
+            padding: 0 20px;
+            margin-top: 50px;
+            .item{
+                margin-bottom: 50px;
+                h2{
+                    letter-spacing: 2px;
+                }
+                .underline{
+                    height: 4px;
+                    background-color: $secondary;
+                    max-width: 250px;
+                    margin-top: 10px;
+                }
+                .list{
+                    margin-top: 20px;
+                    &--item{
+                        display: flex;
+                        margin: 20px 0;
+                        .icon{
+                            margin-right: 10px;
+                            color: $primary;
+                            min-width: 25px;
+                            min-height: 25px;
+                            margin-top: 3px;
+                        }
+                        p{
+                            font-size: 1.5rem;
+                            font-weight: 700;
+                            color: $darkgrey-2;
+                        }
+                    }
+                }
+                .outils{
+                    h2{
+                        margin-bottom: 10px;
+                    }
+                    &--list{
+                        display: flex;
+                        flex-wrap: wrap;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 1150px){
+    #skills{
+        .skills{
+            .content{
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+}
+@media screen and (max-width: 500px){
+    #skills{
+        .skills{
+            .content{
+                grid-template-columns: 1fr;
+                padding: 0 10px;
+                .item{
+                    h2{
+                        font-size: 1.5rem;
+                    }
+                    .underline{
+                        max-width: 180px;
+                    }
+                    .list{
+                        .icon{
+                            min-width: 20px;
+                            min-height: 20px;
+                            margin-top: 0;
+                        }
+                        p{
+                            font-size: 1rem;
+                        }
+                    }
+                    .outils{
+                        &--list{
+                            .btn-outil{
+                                font-size: 1.2rem;
+                            }
                         }
                     }
                 }

@@ -16,7 +16,7 @@ export const skillslist = [
     domain: "Conception graphique",
     skills: [
       "Réalisation de maquettes web sur Figma",
-      "manipulation de composants dynamiques sur Figma",
+      "Manipulation de composants dynamiques sur Figma",
       "Présentation claire d’un projet web à l’aide d’une maquette",
       "Création d’animations simples sur After Effects",
       "Ajout d’effets et manipulation d’images sur Photoshop",
