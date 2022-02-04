@@ -1,18 +1,18 @@
-import Hero from "./composants/Hero";
-import Moi from "./composants/Moi";
-import ScrollToTop from "./composants/ScrollToTop";
-import Services from "./composants/Services";
-import Skills from "./composants/Skills";
-import "./main.scss";
+import Hero from './composants/Hero';
+import Moi from './composants/Moi';
+import Projets from './composants/Projets';
+import Services from './composants/Services';
+import Skills from './composants/Skills';
+import './main.scss'
 
 function App() {
   return (
     <>
-      <ScrollToTop />
       <Hero />
       <Moi />
       <Services />
       <Skills />
+      <Projets />
     </>
   );
 }
