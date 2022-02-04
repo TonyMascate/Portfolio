@@ -7,6 +7,7 @@ $darkgrey: #3c3c3c;
 $darkgrey-1: #404040;
 $darkgrey-2: #636363;
 $lightgrey: #cdcdcd;
+$lightgrey-1: #eeeeee;
 $subtitle: #7b7b7b;
 $white: #fff;
 
@@ -125,6 +126,21 @@ section {
         }
     }
 }
+@media screen and (max-width: 408px) {
+    .title {
+        padding: 20px;
+        margin: 0px 10px 50px 10px;
+        h2 {
+            font-size: 1.9rem;
+        }
+        h3 {
+            font-size: 1.15rem;
+        }
+        .underline {
+            margin-top: 10px;
+        }
+    }
+}
 
 // HERO
 
@@ -134,6 +150,7 @@ section {
     z-index: -2;
     position: relative;
     overflow: hidden;
+    margin-bottom: -2px;
     video {
         object-fit: cover;
         width: 100vw;
@@ -575,6 +592,7 @@ section {
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        margin-bottom: 0px;
         .content {
             margin-top: 50px;
             padding: 0 10px;
@@ -629,7 +647,7 @@ section {
                         width: 100%;
                         margin: 0 0 50px 0;
                     }
-                    .image{
+                    .image {
                         width: 100%;
                     }
                 }
@@ -643,11 +661,177 @@ section {
             .content {
                 .item {
                     .info {
-                        h3{
-                           font-size: 2.25rem; 
+                        h3 {
+                            font-size: 2.25rem;
                         }
-                        p{
+                        p {
                             font-size: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// CONTACT
+#contact {
+    margin-top: -80px;
+    .contact {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        .content {
+            display: flex;
+            align-items: stretch;
+            justify-content: center;
+            width: 100%;
+            margin: 30px 0 100px 0;
+            padding: 0 20px;
+            .info {
+                display: flex;
+                align-items: flex-start;
+                justify-content: center;
+                flex-direction: column;
+                margin-right: 50px;
+                width: 100%;
+                max-width: 600px;
+                &--element {
+                    display: flex;
+                    align-items: center;
+                    .icon {
+                        width: 100px;
+                        height: 100px;
+                        color: $secondary;
+                        margin-right: 50px;
+                    }
+                    p {
+                        font-weight: 700;
+                        font-size: 1.5rem;
+                    }
+                }
+                .underline {
+                    height: 3px;
+                    background-color: $lightgrey-1;
+                    width: 100%;
+                    margin: 50px 0;
+                }
+            }
+            .form {
+                max-width: 600px;
+                width: 100%;
+                form {
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: center;
+                    flex-direction: column;
+                    height: 100%;
+                    .input {
+                        width: 100%;
+                        height: 50px;
+                        display: flex;
+                        align-items: center;
+                        margin: 10px 0;
+                        .icon-container {
+                            width: 50px;
+                            height: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            background-color: $lightgrey-1;
+                            padding: 12px;
+                            .icon {
+                                width: 100%;
+                                height: 100%;
+                                color: $darkgrey-1;
+                            }
+                        }
+                        input {
+                            flex-grow: 1;
+                            height: 100%;
+                            justify-content: center;
+                        }
+                    }
+                    textarea {
+                        width: 100%;
+                        flex-grow: 1;
+                        margin: 10px 0;
+                        resize: none;
+                    }
+                    textarea,
+                    input {
+                        padding: 10px;
+                        font-family: "Montserrat";
+                        font-weight: 600;
+                        font-size: 1rem;
+                        border: 2px solid $lightgrey-1;
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 991px) {
+    #contact {
+        .contact {
+            .content {
+                margin: 0px 0 100px 0;
+                flex-direction: column;
+                align-items: center;
+                .info {
+                    margin-right: 0px;
+                    margin-bottom: 30px;
+                    max-width: 500px;
+                    .underline {
+                        margin: 20px 0;
+                    }
+                    &--element {
+                        .icon {
+                            width: 70px;
+                            height: 70px;
+                        }
+                    }
+                }
+                .form {
+                    max-width: none;
+                    form {
+                        textarea {
+                            min-height: 200px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 550px) {
+    #contact {
+        .contact {
+            .content {
+                .info {
+                    max-width: 325px;
+                    &--element {
+                        p {
+                            font-size: 1rem;
+                            word-break: break-word;
+                        }
+                        .icon {
+                            min-width: 60px;
+                            max-width: 60px;
+                            min-height: 60px;
+                            max-height: 60px;
+                            margin-right: 15px;
+                        }
+                    }
+                }
+                .form {
+                    form {
+                        textarea {
                         }
                     }
                 }

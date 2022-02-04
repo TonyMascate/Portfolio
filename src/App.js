@@ -1,3 +1,4 @@
+import Contact from './composants/Contact';
 import Hero from './composants/Hero';
 import Moi from './composants/Moi';
 import Projets from './composants/Projets';
@@ -13,6 +14,7 @@ function App() {
       <Services />
       <Skills />
       <Projets />
+      <Contact />
     </>
   );
 }
