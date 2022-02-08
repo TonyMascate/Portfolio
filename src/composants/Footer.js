@@ -18,7 +18,9 @@ function Footer() {
             N’hésitez pas à me contacter si vous souhaitez réaliser un devis ou
             obtenir des informations à propos d’un projet.
           </p>
-          <p className="copyright">© 2022 - Tony Mascate, tous droits réservés</p>
+          <p className="copyright">
+            © 2022 - Tony Mascate, tous droits réservés
+          </p>
         </div>
         <div className="moi">
           <h2>Tony Mascate</h2>
@@ -35,12 +37,15 @@ function Footer() {
             <p>L’Isle Jourdain, Gers, France</p>
           </div>
           <div className="socials">
-              <div className="icon-container">
-                  <AiFillInstagram className="icon" />
-              </div>
-              <div className="icon-container">
-                  <AiFillLinkedin className="icon" />
-              </div>
+            <a href="#" className="icon-container">
+              <AiFillInstagram className="icon" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/tony-mascate/"
+              className="icon-container"
+            >
+              <AiFillLinkedin className="icon" />
+            </a>
           </div>
         </div>
       </div>
