@@ -18,9 +18,6 @@ function Footer() {
             N’hésitez pas à me contacter si vous souhaitez réaliser un devis ou
             obtenir des informations à propos d’un projet.
           </p>
-          <p className="copyright">
-            © 2022 - Tony Mascate, tous droits réservés
-          </p>
         </div>
         <div className="moi">
           <h2>Tony Mascate</h2>
@@ -49,6 +46,7 @@ function Footer() {
           </div>
         </div>
       </div>
+      <p className="copyright">© 2022 - Tony Mascate, tous droits réservés</p>
     </section>
   );
 }

@@ -845,6 +845,10 @@ section {
 #footer{
     background-color: $blackgrey;
     padding: 50px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     .footer{
         display: flex;
         align-items: flex-start;
@@ -866,11 +870,6 @@ section {
         }
         .about{
             max-width: 450px;
-            .copyright{
-                margin-top: 20px;
-                font-size: 0.8rem;
-                color: $subtitle;
-            }
         }
         .moi{
             .contact-item{
@@ -904,6 +903,11 @@ section {
                 }
         }
     }
+    .copyright{
+                margin-top: 30px;
+                font-size: 0.8rem;
+                color: $subtitle;
+            }
 }
 @media screen and (max-width: 900px){
     #footer{
