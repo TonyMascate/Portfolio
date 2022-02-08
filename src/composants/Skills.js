@@ -7,8 +7,8 @@ function Skills() {
     <section id="skills">
       <div className="skills container">
         <div className="title">
-          <h2>Mes services</h2>
-          <h3>Des services adaptés à vos besoins</h3>
+          <h2>Mes compétences</h2>
+          <h3>Des compétences à votre service</h3>
           <div className="underline"></div>
         </div>
         <div className="content">

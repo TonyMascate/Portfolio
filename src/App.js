@@ -1,4 +1,5 @@
 import Contact from './composants/Contact';
+import Footer from './composants/Footer';
 import Hero from './composants/Hero';
 import Moi from './composants/Moi';
 import Projets from './composants/Projets';
@@ -15,6 +16,7 @@ function App() {
       <Skills />
       <Projets />
       <Contact />
+      <Footer />
     </>
   );
 }
