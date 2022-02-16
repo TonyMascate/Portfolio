@@ -1,9 +1,9 @@
 import React from 'react';
 import {projects} from '../datas/projectlist'
 
-function Projets() {
+function Projets({projets}) {
   return (
-    <section id="projets">
+    <section id="projets" ref={projets}>
       <div className="projets container">
         <div className="title">
           <h2>Mes projets</h2>

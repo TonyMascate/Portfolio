@@ -7,7 +7,7 @@ import { AiFillInstagram, AiFillLinkedin } from "react-icons/ai";
 function Footer() {
   return (
     <section id="footer">
-      <div className="footer">
+      <footer className="footer">
         <div className="content">
           <div className="about">
             <h2>Développeur web freelance</h2>
@@ -48,7 +48,7 @@ function Footer() {
           </div>
         </div>
         <p className="copyright">© 2022 - Tony Mascate, tous droits réservés</p>
-      </div>
+      </footer>
     </section>
   );
 }
