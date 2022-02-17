@@ -57,7 +57,6 @@ function Contact() {
                   type="tel"
                   id="phone"
                   name="phone"
-                  pattern="[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}"
                   placeholder="Téléphone"
                   required
                 />
