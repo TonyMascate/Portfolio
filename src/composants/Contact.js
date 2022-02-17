@@ -30,24 +30,41 @@ function Contact() {
             </div>
           </div>
           <div className="form">
-            <form action="../mail.php">
+            <form action="../mail.php" method="POST">
               <div className="input">
                 <div className="icon-container">
                   <FaUserAlt className="icon" />
                 </div>
-                <input type="text" name="name" id="name" placeholder="Nom / Prénom" required />
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Nom / Prénom"
+                  required
+                />
               </div>
               <div className="input">
                 <div className="icon-container">
                   <FaBuilding className="icon" />
                 </div>
-                <input type="text" name="raisonsociale" id="raisonsociale" placeholder="Raison sociale ( facultatif )"/>
+                <input
+                  type="text"
+                  name="raisonsociale"
+                  id="raisonsociale"
+                  placeholder="Raison sociale ( facultatif )"
+                />
               </div>
               <div className="input">
                 <div className="icon-container">
                   <IoMdMail className="icon" />
                 </div>
-                <input type="email" name="email" id="email" placeholder="E-mail" required />
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="E-mail"
+                  required
+                />
               </div>
               <div className="input">
                 <div className="icon-container">
@@ -61,8 +78,14 @@ function Contact() {
                   required
                 />
               </div>
-              <textarea name="message" id="message" placeholder="Merci de détailler votre requête ici en donnant le plus de détail possible."></textarea>
-              <button className="btn-primary" type="submit">ENVOYER</button>
+              <textarea
+                name="message"
+                id="message"
+                placeholder="Merci de détailler votre requête ici en donnant le plus de détail possible."
+              ></textarea>
+              <button className="btn-primary" type="submit">
+                ENVOYER
+              </button>
             </form>
           </div>
         </div>
