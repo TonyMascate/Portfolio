@@ -91,7 +91,6 @@ function Navbar() {
               to="services"
               spy={true}
               smooth={true}
-              offset={-100}
               duration={500}
               hashSpy={true}
             >
@@ -102,10 +101,9 @@ function Navbar() {
           <li>
             <Link
               activeClass="active"
-              to="services"
+              to="skills"
               spy={true}
               smooth={true}
-              offset={-100}
               duration={500}
               hashSpy={true}
             >
@@ -116,10 +114,9 @@ function Navbar() {
           <li>
             <Link
               activeClass="active"
-              to="services"
+              to="projets"
               spy={true}
               smooth={true}
-              offset={-100}
               duration={500}
               hashSpy={true}
             >
@@ -130,10 +127,9 @@ function Navbar() {
           <li>
             <Link
               activeClass="active"
-              to="services"
+              to="moi"
               spy={true}
               smooth={true}
-              offset={-100}
               duration={500}
               hashSpy={true}
             >
@@ -144,10 +140,9 @@ function Navbar() {
           <li>
             <Link
               activeClass="active"
-              to="services"
+              to="contact"
               spy={true}
               smooth={true}
-              offset={-100}
               duration={500}
               hashSpy={true}
             >

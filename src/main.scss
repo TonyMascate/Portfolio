@@ -990,6 +990,9 @@ section {
         }
     }
 }
+.mobile {
+    display: none;
+}
 @media screen and (max-width: 768px) {
     .large {
         display: none;
@@ -1029,15 +1032,30 @@ section {
                     }
                 }
             }
+            .active {
+                position: relative;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: -25px;
+                    left: -10%;
+                    width: 120%;
+                    height: 100%;
+                    background-color: $secondary;
+                    border-radius: 100px;
+                    z-index: -1;
+                    transition: 1s all ease;
+                }
+            }
         }
     }
 }
-@media screen and (max-width: 330px){
-    .mobile{
-        ul{
-            li{
-                a{
-                    p{
+@media screen and (max-width: 330px) {
+    .mobile {
+        ul {
+            li {
+                a {
+                    p {
                         display: none;
                     }
                 }

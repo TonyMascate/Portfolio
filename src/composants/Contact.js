@@ -30,7 +30,7 @@ function Contact() {
             </div>
           </div>
           <div className="form">
-            <form action="">
+            <form action="../mail.php">
               <div className="input">
                 <div className="icon-container">
                   <FaUserAlt className="icon" />
