@@ -70,9 +70,9 @@
             </body>
         </html>";
         
-            mail($to, $subject, $body, $header);
+            mail($to, $body, $header);
         
-            header ("Location: thanks.html");
+            header ("Location: /");
         }
     }
 
